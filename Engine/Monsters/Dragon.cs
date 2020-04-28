@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Game.Engine.Monsters
 {
     [Serializable]
-    //example monster Demon
+
     class Dragon : Monster
     {
         int lastDamageTaken = 0;
@@ -21,7 +21,7 @@ namespace Game.Engine.Monsters
             Stamina = 200 + dragonLevel;
             XPValue = 200 + dragonLevel;
             Name = "monster0004";
-            BattleGreetings = "Let the games begin!"; // Demon is greeting you
+            BattleGreetings = "Let the games begin!"; // Dragon is greeting you
 
         }
         public override List<StatPackage> BattleMove()

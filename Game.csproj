@@ -139,6 +139,7 @@
     <Compile Include="Engine\MetaMapMatrix.cs" />
     <Compile Include="Engine\Monsters\Demon.cs" />
     <Compile Include="Engine\Monsters\Dragon.cs" />
+    <Compile Include="Engine\Monsters\Jinn.cs" />
     <Compile Include="Engine\Monsters\Monster.cs" />
     <Compile Include="Engine\CharacterClasses\Player.cs" />
     <Compile Include="Engine\Monsters\MonsterFactories\DemonFactory.cs" />
@@ -244,9 +245,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Display\Assets\portal0001.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="monster0003.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Display\Assets\monster0003.png">
