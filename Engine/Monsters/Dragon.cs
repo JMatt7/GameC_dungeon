@@ -47,7 +47,7 @@ namespace Game.Engine.Monsters
             }
             else
             {
-                stamina += 20;
+                stamina += 30;
                 return new List<StatPackage>() { new StatPackage("none", 0, "Dragon is gathering stamina for next attack!") };
             }
         }
