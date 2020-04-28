@@ -42,7 +42,8 @@ namespace Game.Engine
         {
             new Monsters.MonsterFactories.RatFactory(),
             new Monsters.MonsterFactories.DemonFactory(),
-            new Monsters.MonsterFactories.DragonFactory()
+            new Monsters.MonsterFactories.DragonFactory(),
+            new Monsters.MonsterFactories.JinnFactory()
         };
 
     }

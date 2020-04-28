@@ -18,7 +18,7 @@ namespace Game.Engine.Monsters
             Armor = 20;
             Precision = 100;
             MagicPower = 30;
-            Stamina = 200 + dragonLevel;
+            Stamina = 200 + 5*dragonLevel;
             XPValue = 200 + dragonLevel;
             Name = "monster0004";
             BattleGreetings = "Let the games begin!"; // Dragon is greeting you

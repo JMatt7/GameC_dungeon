@@ -144,6 +144,7 @@
     <Compile Include="Engine\CharacterClasses\Player.cs" />
     <Compile Include="Engine\Monsters\MonsterFactories\DemonFactory.cs" />
     <Compile Include="Engine\Monsters\MonsterFactories\DragonFactory.cs" />
+    <Compile Include="Engine\Monsters\MonsterFactories\JinnFactory.cs" />
     <Compile Include="Engine\Monsters\MonsterFactories\MonsterFactory.cs" />
     <Compile Include="Engine\Monsters\MonsterFactories\RatFactory.cs" />
     <Compile Include="Engine\Monsters\Rat.cs" />
@@ -253,6 +254,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Display\Assets\monster0004.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Display\Assets\monster0005.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
