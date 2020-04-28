@@ -27,7 +27,7 @@ namespace Game.Engine.Monsters
         }
         public override List<StatPackage> BattleMove()
         {
-            if (stamina > 0)
+            if (stamina > 15)
             {
                 int rand = random.Next(0, 10);
                 if (rand < 8 || lastDamageTaken < 0.6*Health)

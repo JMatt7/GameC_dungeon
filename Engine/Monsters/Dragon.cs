@@ -10,41 +10,60 @@ namespace Game.Engine.Monsters
     //example monster Demon
     class Dragon : Monster
     {
-        Random random = new Random();
+        int lastDamageTaken = 0;
         public Dragon(int dragonLevel)
         {
-            Health = 50 + 5 * dragonLevel;
-            Strength = 20 + 2 * dragonLevel;
-            Armor = 10;
-            Precision = 75;
-            MagicPower = 20;
-            Stamina = 100 + dragonLevel;
-            XPValue = 100 + dragonLevel;
+            Health = 100 + 5 * dragonLevel;
+            Strength = 30 + 2 * dragonLevel;
+            Armor = 20;
+            Precision = 100;
+            MagicPower = 30;
+            Stamina = 200 + dragonLevel;
+            XPValue = 200 + dragonLevel;
             Name = "monster0004";
             BattleGreetings = "Let the games begin!"; // Demon is greeting you
 
         }
         public override List<StatPackage> BattleMove()
         {
-            if (stamina > 0)
+            if (stamina > 30)
             {
-                int rand = random.Next(0, 10);
-                if (rand < 8)
+                if (lastDamageTaken < 0.5*Health && stamina >=30)
                 {
-                    stamina -= 15;
-                    return new List<StatPackage>() { new StatPackage("Basic Fire", strength, "Demon use fire attack! (" + strength + ") burnt damage") };
+                    stamina -= 30;
+                    return new List<StatPackage>() { new StatPackage("Dragon Breath	", strength/2, "Dragon use Dragon Breath! (" + strength/2 + ") burnt damage") };
+                }
+                else if(lastDamageTaken >= 0.5*Health && lastDamageTaken<=0.9*Health && stamina >= 60)
+                {
+                    stamina -= 60;
+                    return new List<StatPackage>() { new StatPackage("Dragon Claw", strength , strength/2, armor/2, precision/2, magicPower/2, "Dragon use Dragon Claw! (" + strength + ") damage taken!") };
                 }
                 else
                 {
-                    stamina -= 30;
-                    return new List<StatPackage>() { new StatPackage("Advanced Fire", strength * 2, strength, armor, precision, magicPower, "Demon use advanced fire attack! (" + strength * 2 + ") burnt damage") };
+                    stamina -= 100;
+                    return new List<StatPackage>() { new StatPackage("Devastating Drake", strength * 3, strength, armor, precision, magicPower, "Dragon use Devastating Drake attack! (" + strength * 3 + ") damage taken!") };
+
                 }
             }
             else
             {
-                stamina += 10;
-                return new List<StatPackage>() { new StatPackage("none", 0, "Demon is gathering stamina for next attack!") };
+                stamina += 20;
+                return new List<StatPackage>() { new StatPackage("none", 0, "Dragon is gathering stamina for next attack!") };
             }
+        }
+
+        public override void React(List<StatPackage> packs)
+        {
+            foreach (StatPackage pack in packs)
+            {
+                lastDamageTaken = pack.HealthDmg;
+                Health -= pack.HealthDmg;
+                Strength -= pack.StrengthDmg;
+                Armor -= pack.ArmorDmg;
+                Precision -= pack.PrecisionDmg;
+                MagicPower -= pack.MagicPowerDmg;
+            }
+
         }
     }
 }
