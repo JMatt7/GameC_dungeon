@@ -33,12 +33,12 @@ namespace Game.Engine.Monsters
                 if (rand < 8 || lastDamageTaken < 0.6*Health)
                 {
                     stamina -= 15;
-                    return new List<StatPackage>() { new StatPackage("Basic Fire", strength, "Demon use fire attack! (" + strength + ") burnt damage") };
+                    return new List<StatPackage>() { new StatPackage("Fire", strength, "Demon use fire attack! (" + strength + ") burnt damage") };
                 }
                 else
                 {
                     stamina -= 30;
-                    return new List<StatPackage>() { new StatPackage("Advanced Fire", strength * 2, strength, armor, precision, magicPower, "Demon use advanced fire attack! (" + strength * 2 + ") burnt damage") };
+                    return new List<StatPackage>() { new StatPackage("Fire", strength * 2, strength, armor, precision, magicPower, "Demon use advanced fire attack! (" + strength * 2 + ") burnt damage") };
                 }
             }
             else

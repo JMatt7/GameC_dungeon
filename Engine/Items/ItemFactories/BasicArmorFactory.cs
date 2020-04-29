@@ -15,7 +15,8 @@ namespace Game.Engine.Items.ItemFactories
                 new SteelArmor(),
                 new AntiMagicArmor(),
                 new BerserkerArmor(),
-                new GrowingStoneArmor()
+                new GrowingStoneArmor(),
+                new TitanCuirass()
             };
             return basicArmor[Index.RNG(0, basicArmor.Count)];
         }
@@ -37,7 +38,8 @@ namespace Game.Engine.Items.ItemFactories
             {
                 new SteelArmor(),
                 new AntiMagicArmor(),
-                new GrowingStoneArmor()
+                new GrowingStoneArmor(),
+                new TitanCuirass()
             };
             return basicArmor[Index.RNG(0, basicArmor.Count)];
         }

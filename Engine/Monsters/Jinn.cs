@@ -32,13 +32,13 @@ namespace Game.Engine.Monsters
                 if(lastMagicPower < 0.5 * MagicPower)
                 {
                     stamina -= 20;
-                    return new List<StatPackage>() { new StatPackage("Ice Strike", magicPower*r, "Jinn use Ice strike! (" + magicPower * r + ") damage taken!") };
+                    return new List<StatPackage>() { new StatPackage("Water", magicPower*r, "Jinn use Ice strike! (" + magicPower * r + ") damage taken!") };
 
                 }
                 else
                 {
                     stamina -= 20;
-                    return new List<StatPackage>() { new StatPackage("Blizzard", magicPower * r, 0, armor/2, 0, magicPower, "Jinn use Blizzard attack! (" + magicPower * r + ") damage taken!") };
+                    return new List<StatPackage>() { new StatPackage("Earth", magicPower * r, 0, armor/2, 0, magicPower, "Jinn use Blizzard attack! (" + magicPower * r + ") damage taken!") };
 
                 }
             }

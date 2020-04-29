@@ -124,14 +124,17 @@
     <Compile Include="Engine\Items\BasicArmor\BerserkerArmor.cs" />
     <Compile Include="Engine\Items\BasicArmor\GrowingStoneArmor.cs" />
     <Compile Include="Engine\Items\BasicArmor\SteelArmor.cs" />
+    <Compile Include="Engine\Items\BasicArmor\TitanCuirass.cs" />
     <Compile Include="Engine\Items\BasicSpear.cs" />
     <Compile Include="Engine\Items\BasicStaff.cs" />
     <Compile Include="Engine\Items\BasicSword.cs" />
+    <Compile Include="Engine\Items\CentaursAxe.cs" />
     <Compile Include="Engine\Items\Item.cs" />
     <Compile Include="Engine\Index.cs" />
     <Compile Include="Engine\Items\BasicAxe.cs" />
     <Compile Include="Engine\Items\ItemFactories\BasicArmorFactory.cs" />
     <Compile Include="Engine\Items\ItemFactories\ItemFactory.cs" />
+    <Compile Include="Engine\Items\LightingSword.cs" />
     <Compile Include="Engine\Items\Spear.cs" />
     <Compile Include="Engine\Items\Staff.cs" />
     <Compile Include="Engine\Items\Sword.cs" />
@@ -259,6 +262,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Display\Assets\monster0005.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Display\Assets\item0009.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Display\Assets\item0010.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Display\Assets\items0011.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

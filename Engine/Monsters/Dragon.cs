@@ -31,17 +31,17 @@ namespace Game.Engine.Monsters
                 if (lastDamageTaken < 0.5*Health && stamina >=30)
                 {
                     stamina -= 30;
-                    return new List<StatPackage>() { new StatPackage("Dragon Breath	", strength/2, "Dragon use Dragon Breath! (" + strength/2 + ") burnt damage") };
+                    return new List<StatPackage>() { new StatPackage("Fire", strength/2, "Dragon use Dragon Breath! (" + strength/2 + ") burnt damage") };
                 }
                 else if(lastDamageTaken >= 0.5*Health && lastDamageTaken<=0.9*Health && stamina >= 60)
                 {
                     stamina -= 60;
-                    return new List<StatPackage>() { new StatPackage("Dragon Claw", strength , strength/2, armor/2, precision/2, magicPower/2, "Dragon use Dragon Claw! (" + strength + ") damage taken!") };
+                    return new List<StatPackage>() { new StatPackage("incised", strength , strength/2, armor/2, precision/2, magicPower/2, "Dragon use Dragon Claw! (" + strength + ") damage taken!") };
                 }
                 else
                 {
                     stamina -= 100;
-                    return new List<StatPackage>() { new StatPackage("Devastating Drake", strength * 3, strength, armor, precision, magicPower, "Dragon use Devastating Drake attack! (" + strength * 3 + ") damage taken!") };
+                    return new List<StatPackage>() { new StatPackage("Air", strength * 3, strength, armor, precision, magicPower, "Dragon use Devastating Drake attack! (" + strength * 3 + ") damage taken!") };
 
                 }
             }
