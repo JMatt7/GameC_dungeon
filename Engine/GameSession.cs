@@ -82,7 +82,9 @@ namespace Game.Engine
                 }
                 else if (playerChoice.Contains("Sword"))
                 {
-                    ProduceItem("item0004");
+                    ProduceItem("item0009");
+                    ProduceItem("item0010");
+                    ProduceItem("item0012");
                     currentPlayer.Learn(new SwordSlash());
                 }
                 else if (playerChoice.Contains("Spear"))

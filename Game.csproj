@@ -123,6 +123,7 @@
     <Compile Include="Engine\Items\BasicArmor\AntiMagicArmor.cs" />
     <Compile Include="Engine\Items\BasicArmor\BerserkerArmor.cs" />
     <Compile Include="Engine\Items\BasicArmor\GrowingStoneArmor.cs" />
+    <Compile Include="Engine\Items\BasicArmor\LionShield.cs" />
     <Compile Include="Engine\Items\BasicArmor\SteelArmor.cs" />
     <Compile Include="Engine\Items\BasicArmor\TitanCuirass.cs" />
     <Compile Include="Engine\Items\BasicSpear.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Engine\Index.cs" />
     <Compile Include="Engine\Items\BasicAxe.cs" />
     <Compile Include="Engine\Items\ItemFactories\BasicArmorFactory.cs" />
+    <Compile Include="Engine\Items\ItemFactories\BasicWeaponFactory.cs" />
     <Compile Include="Engine\Items\ItemFactories\ItemFactory.cs" />
     <Compile Include="Engine\Items\LightingSword.cs" />
     <Compile Include="Engine\Items\Spear.cs" />
@@ -270,10 +272,17 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Display\Assets\item0010.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Display\Assets\items0011.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Display\Assets\item0011.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Display\Assets\item0012.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

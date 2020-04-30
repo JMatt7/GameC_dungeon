@@ -10,7 +10,7 @@ namespace Game.Engine.Items
     {
         private int centaurWrath;
         Random rand = new Random();
-        public CentaursAxe(string name) : base("item0011")
+        public CentaursAxe() : base("item0011")
         {
             PublicName = "Centaur's Axe";
             GoldValue = 50;

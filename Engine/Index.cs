@@ -30,12 +30,17 @@ namespace Game.Engine
             new SteelArmor(),
             new AntiMagicArmor(),
             new BerserkerArmor(),
-            new GrowingStoneArmor()
+            new GrowingStoneArmor(),
+            new TitanCuirass(),
+            new LightingSword(),
+            new CentaursAxe(),
+            new LionShield()
         };
 
         private static List<ItemFactory> itemFactories = new List<ItemFactory>()
         {
-            new BasicArmorFactory()
+            new BasicArmorFactory(),
+            new BasicWeaponFactory()
         };
 
         private static List<MonsterFactory> monsterFactories = new List<MonsterFactory>()
