@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Game.Engine.Skills.BasicSkills;
 using Game.Engine.CharacterClasses;
+using Game.Engine.Skills.BasicSpells;
 
 namespace Game.Engine.Skills.SkillFactories
 {
@@ -18,11 +19,13 @@ namespace Game.Engine.Skills.SkillFactories
                 FireArrow s1 = new FireArrow();
                 LightFlash s2 = new LightFlash();
                 WindGust s3 = new WindGust();
+                IcarusStorm s4 = new IcarusStorm();
                 // only include elligible spells
                 List<Skill> tmp = new List<Skill>();
                 if (s1.MinimumLevel <= player.Level) tmp.Add(s1); // check level requirements
                 if (s2.MinimumLevel <= player.Level) tmp.Add(s2);
                 if (s3.MinimumLevel <= player.Level) tmp.Add(s3);
+                if (s4.MinimumLevel <= player.Level) tmp.Add(s4);
                 if (tmp.Count == 0) return null;
                 return tmp[Index.RNG(0, tmp.Count)]; // use Index.RNG for safe random numbers
             }
@@ -31,10 +34,12 @@ namespace Game.Engine.Skills.SkillFactories
                 FireArrowDecorator s1 = new FireArrowDecorator(known);
                 LightFlashDecorator s2 = new LightFlashDecorator(known);
                 WindGustDecorator s3 = new WindGustDecorator(known);
+                IcarusStormDecorator s4 = new IcarusStormDecorator(known);
                 List<Skill> tmp = new List<Skill>();
                 if (s1.MinimumLevel <= player.Level) tmp.Add(s1); // check level requirements
                 if (s2.MinimumLevel <= player.Level) tmp.Add(s2);
                 if (s3.MinimumLevel <= player.Level) tmp.Add(s3);
+                if (s4.MinimumLevel <= player.Level) tmp.Add(s4);
                 if (tmp.Count == 0) return null;
                 return tmp[Index.RNG(0, tmp.Count)];
             }
@@ -44,7 +49,7 @@ namespace Game.Engine.Skills.SkillFactories
         {
             foreach (Skill skill in skills)
             {
-                if (skill is FireArrow || skill is WindGust || skill is LightFlash || skill is FireArrowDecorator || skill is WindGustDecorator || skill is LightFlashDecorator) return skill;
+                if (skill is FireArrow || skill is WindGust || skill is LightFlash || skill is FireArrowDecorator || skill is WindGustDecorator || skill is LightFlashDecorator || skill is IcarusStorm || skill is IcarusStormDecorator) return skill;
             }
             return null;
         }       

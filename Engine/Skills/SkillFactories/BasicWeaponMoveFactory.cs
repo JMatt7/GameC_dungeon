@@ -18,9 +18,11 @@ namespace Game.Engine.Skills.SkillFactories
             SpearStab s1 = new SpearStab();
             SwordSlash s2 = new SwordSlash();
             AxeCut s3 = new AxeCut();
+            
             if (s1.MinimumLevel <= player.Level) tmp.Add(s1); // check level requirements
             if (s2.MinimumLevel <= player.Level) tmp.Add(s2);
             if (s3.MinimumLevel <= player.Level) tmp.Add(s3);
+            
             foreach (Skill skill in playerSkills) // don't offer skills which the player knows already
             {
                 if (skill is SpearStab) tmp.Remove(s1);
