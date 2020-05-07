@@ -170,7 +170,7 @@
     <Compile Include="Engine\Skills\BasicWeaponMoves\SwordSlash.cs" />
     <Compile Include="Engine\Skills\Skill.cs" />
     <Compile Include="Engine\Skills\SkillDecorator.cs" />
-    <Compile Include="Engine\Skills\SkillFactories\AdvancedSkillFactory.cs" />
+    <Compile Include="Engine\Skills\SkillFactories\AdvancedWeaponSkillFactory.cs" />
     <Compile Include="Engine\Skills\SkillFactories\BasicSpellFactory.cs" />
     <Compile Include="Engine\Skills\BasicSpells\WindGust.cs" />
     <Compile Include="Engine\Skills\BasicSpells\WindGustDecorator.cs" />

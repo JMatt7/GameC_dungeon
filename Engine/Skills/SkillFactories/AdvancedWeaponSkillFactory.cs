@@ -9,7 +9,7 @@ using Game.Engine.Skills.BasicWeaponMoves;
 namespace Game.Engine.Skills.SkillFactories
 {
     [Serializable]
-    class AdvancedSkillFactory : SkillFactory
+    class AdvancedWeaponSkillFactory : SkillFactory
     {
         public Skill CreateSkill(Player player)
         {
